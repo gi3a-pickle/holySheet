@@ -6,5 +6,9 @@ export default defineNuxtConfig({
       GOOGLE_API_KEY: process.env.GOOGLE_API_KEY,
       SPREAD_SHEET_ID: process.env.SPREAD_SHEET_ID
     }
-  }
+  },
+  css: [
+    '@/assets/css/index.scss',
+    '@/assets/css/page.scss',
+  ],
 })

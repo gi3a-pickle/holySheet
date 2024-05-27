@@ -88,25 +88,8 @@ onMounted(() => {
                 <span>461 WINSLOW WAY LAKE IN THE HILLS, IL 60156</span>
                 <span>{{ driverName }}</span>
             </div>
-            <table>
-                <thead>
-                    <tr>
-                        <th v-for="col in headings" :key="col" v-html="col"></th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="(row, index) in filteredRoutes" :key="index">
-                        <td>{{ row[0] }}</td>
-                        <td>{{ row[1] }}</td>
-                        <td>{{ row[2] }}</td>
-                        <td>{{ row[3] }}</td>
-                        <td>{{ row[4] }}</td>
-                        <td>{{ row[5] }}</td>
-                        <td>{{ row[6] }}</td>
-                        <td>{{ row[7] }}</td>
-                    </tr>
-                </tbody>
-            </table>
+            <RouteList :headings="headings" :result="filteredRoutes" />
+
         </div>
     </div>
 </template>
